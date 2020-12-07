@@ -20,7 +20,7 @@ public class RoomCleanerProcessor {
     }
 
     public void receiveMessage(String roomJson) {
-        LOGGER.info("Message received");
+        LOGGER.info("Message Received");
         try {
             Room room = this.objectMapper.readValue(roomJson, Room.class);
             LOGGER.info("Room ready for cleaning " + room.getNumber());
