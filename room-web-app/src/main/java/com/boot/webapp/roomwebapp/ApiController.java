@@ -1,5 +1,6 @@
 package com.boot.webapp.roomwebapp;
 
+import com.boot.service.logging.servicelogging.Timed;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -20,6 +21,7 @@ public class ApiController {
     }
 
     @GetMapping("/rooms")
+    @Timed
     public List<Room> getAllRooms() {
         return this.roomServices.getAllRooms();
     }
